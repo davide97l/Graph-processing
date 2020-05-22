@@ -2,7 +2,7 @@
 
 In this project, have been implemented three parts of the typical pipeline of graph processing in real world scenario: **preprocessin**, **processing**, and **postprocessing**.
 <p align="center">
-<img src="images/graph_pipeline.PNG" width="100%" ></a>
+<img src="images/graph_pipeline.PNG" width="80%" ></a>
 </p>
 
 ## Preprocessing
@@ -18,6 +18,9 @@ This consists of a 're-mapping' operation: converts node ID (after pre-processin
 ## Requirements
 - numpy
 - pyspark
+
+## Input graph
+The input raw graph data are edge lists of unweighted and directed graphs in text form. An undirected graph can be made directed simply by adding the option `undirected` in the preprocessing phase. Each line of the file represents an edge in the format:  <source_identifier destination_identifier> (separator is one space). An example of raw graph data graph data can be found in the directory `graphs`.
 
 ## Usage examples
 
