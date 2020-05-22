@@ -2,7 +2,7 @@
 
 In this project, have been implemented three parts of the typical pipeline of graph processing in real world scenario: **preprocessin**, **processing**, and **postprocessing**.
 <p align="center">
-<img src="images/graph_pipeline.png" width="100%" ></a>
+<img src="images/graph_pipeline.PNG" width="100%" ></a>
 </p>
 
 ## Preprocessing
