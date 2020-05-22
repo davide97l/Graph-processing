@@ -13,7 +13,7 @@ In real word scenario, the raw graph data usually contains some sensitive inform
 - Trustrank [[link]](https://en.wikipedia.org/wiki/TrustRank)
 
 ## Post-processing
-This consists of a 're-mapping' operation: converts node ID (after pre-processing) in the results to raw identifier. 
+This phase consists of a 're-mapping' operation: converts node ID (after pre-processing) in the results to raw identifier. 
 
 ## Requirements
 - numpy
