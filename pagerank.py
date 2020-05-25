@@ -20,7 +20,8 @@ def contribution(out_nodes, tot_rank):
 if __name__ == '__main__':
     """
     EXAMPLE
-    usage: python pagerank.py --input_file wiki-Vote_mapped.txt --num_iterations 1 --k_top 5
+    usage: python pagerank.py --input_file wiki-Vote_mapped.txt --num_iterations 20 --k_top 5
+    python pagerank.py --input_file com-lj_mapped.txt --num_iterations 1 --k_top 5
     generates files: wiki-Vote_mapped_pagerank_top-5.txt
     """
     ap = argparse.ArgumentParser()
@@ -64,7 +65,7 @@ if __name__ == '__main__':
     ranks = ranks.map(lambda x: (x[1], x[0])).sortByKey(False).map(lambda x: (x[1], x[0])).take(top_k)
 
     np_ranks = np.array(ranks).astype(float)
-    fmt = '%1u', '%1.6f'
+    fmt = '%1u', '%1.9f'
     if not args.k_top:
         top_k = "all"
     np.savetxt(args.input_file.split(".")[0] + "_pagerank_top-" + str(top_k) + ".txt", np_ranks, fmt=fmt)

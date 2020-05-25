@@ -15,7 +15,7 @@ if __name__ == '__main__':
     args = ap.parse_args()
 
     input_file = args.input_file
-    rank = np.loadtxt(input_file, dtype=np.int32)
+    rank = np.loadtxt(input_file, dtype=np.float32)
     map_file = args.mapping_file
     map = np.loadtxt(map_file, dtype=np.int32)
 
@@ -27,7 +27,8 @@ if __name__ == '__main__':
     ranked_vertices_raw = np.vectorize(lambda x: map_table[x])(ranked_vertices_id)  # convert to raw
     rank[:, 0] = ranked_vertices_raw
 
+    fmt = '%1u', '%1.9f'
     file_name = input_file.replace('_mapped', '')
-    np.savetxt(file_name, rank, fmt='%1u')
+    np.savetxt(file_name, rank, fmt=fmt)
 
     print("Postprocess completed")
