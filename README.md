@@ -1,4 +1,4 @@
-# Spark-graph-processing
+# Graph-processing
 
 In this project, have been implemented three parts of the typical pipeline of graph processing in real world scenario: **preprocessin**, **processing**, and **postprocessing**.
 <p align="center">
